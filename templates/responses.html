@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <b>Name of Tasks assigned: </b><p>{{ a }}</p>
+
+    <b>Number of Tasks assigned: </b><p>{{ b }}</p>
+    <b>Task overdue: </b><br>
+    {% set count = 0 %}
+    {% for num in c %}
+            <a href="{{c[count]}}">{{c[count]}}</a><p></p>
+        {% set count = count + 1 %}
+    {% endfor %}
+
+    <b>Total number of overdue tasks: </b><p>{{ d }}</p>
+    <b>Task without due date: </b><br>
+    {% set count = 0 %}
+    {% for num in e %}
+            <a href="{{e[count]}}">{{e[count]}}</a><p></p>
+        {% set count = count + 1 %}
+    {% endfor %}
+
+
+    <b>Total number of tasks without due date: </b><p>{{ f }}</p>
+    <b>Task without Estimate: </b><br>
+    {% set count = 0 %}
+    {% for num in g %}
+            <a href="{{g[count]}}">{{g[count]}}</a><p></p>
+        {% set count = count + 1 %}
+    {% endfor %}
+
+    <b>Total number of tasks without estimate: </b><p>{{ h }}</p>
+
+    <b>Estimated tasks with time records: </b><p></p>
+
+    {% set count = 0 %}
+    {% for num in i %}
+        <p><b> Task Url: </b><a href="{{i[count]}}">{{i[count]}}</a><b> Estimate: </b> {{j[count]}} <b> Logged Hours: </b> {{k[count]}}</p>
+        {% set count = count + 1 %}
+    {% endfor %}
+    <b> Task Url's of all tasks assigned: </b><br>
+    {% set count = 0 %}
+    {% for num in l %}
+        <p><a href="{{l[count]}}">{{l[count]}}</a><p></p>
+        {% set count = count + 1 %}
+    {% endfor %}
+
+
+
+
+
+
+</body>
+</html>
