@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-
 </head>
 <body>
-    <b>Name of Tasks assigned: </b><p>{{ a }}</p>
+<form id="form_1164988" class="appnitro"  method="post" action="/send-mail">
+    <b>Name of Tasks assigned: </b><br>
+    {% set count = 0 %}
+    {% for num in a %}
+        {{a[count]}}<p></p>
+        {% set count = count + 1 %}
+    {% endfor %}
 
     <b>Number of Tasks assigned: </b><p>{{ b }}</p>
     <b>Task overdue: </b><br>
@@ -50,9 +54,20 @@
     {% endfor %}
 
 
+<br><br>
+<b>Comment Box: </b><br>
+<textarea name="textarea" rows="4" cols="50"></textarea>
+<br><br>
+<b>Recipients Email addresses: </b>  <br>
+<input class="mdl-textfield__input" type="text"  name="text2"><br>
+<input class="mdl-textfield__input" type="text"  name="text3">
+
+<br><br>
+<input id="saveForm" class="button_text" type="submit" name="send Email" value="Send Email" />
 
 
 
 
+</form>
 </body>
 </html>
