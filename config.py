@@ -1,0 +1,8 @@
+hostname = "172.30.0.134"
+username = "pmmanage_office"
+password = "Z&JBhS6C!qc5P"
+database = "pmmanage_act5"
+api_username = "madhav@sjinnovation.com"
+api_password = "cwby008"
+mail_username = "qm@sjinnovation.com"
+mail_passowrd = "123Tarrytown"
